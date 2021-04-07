@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping({"/api/"})
-
 public class IndexController {
 
     @Autowired

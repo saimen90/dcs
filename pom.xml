@@ -17,6 +17,7 @@
     <modules>
         <module>dcs-demo-redisson</module>
         <module>dcs-demo-openFeign</module>
+        <module>dcs-demo-zookeeper</module>
     </modules>
 
 
