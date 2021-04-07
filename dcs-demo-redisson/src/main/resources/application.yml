@@ -1,0 +1,46 @@
+server:
+  http2:
+    enabled: true
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+  error:
+    include-exception: true
+    include-stacktrace: on-trace-param
+    path: /error
+    whitelabel:
+      enabled: true
+  port: 4560
+  servlet:
+    context-path: /
+    session:
+      timeout: 604800
+
+spring:
+  application:
+    name: dcs-demo-redisson
+  profiles:
+    active: dev,commondev,interfacedev
+  #    active: pro,commonpro,interfacepro
+  #    active: uat,commonuat,interfaceuat
+  jpa:
+    show-sql: true
+security:
+  basic:
+    enabled: false
+
+mybatis:
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+pagehelper:
+  helper-dialect: mysql #数据库方言
+  reasonable: true      #分页合理化
+  support-methods-arguments: true #是否支持接口参数来传递分页参数，默认false
+  page-size-zero: true #当设置为true的时候，如果pagesize设置为0（或RowBounds的limit=0），就不执行分页，返回全部结果
+  params: count=countSql
