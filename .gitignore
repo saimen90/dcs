@@ -1,3 +1,4 @@
 .idea/
 dcs.iml
 dcs-demo-redisson/target/
+dcs-demo-openFeign/target/

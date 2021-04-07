@@ -16,6 +16,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dcs-demo-redisson</module>
+        <module>dcs-demo-openFeign</module>
     </modules>
 
 
